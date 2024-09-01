@@ -1,0 +1,46 @@
+{% extends "Utils/base.html" %}
+
+{% block content %}
+<div class="cont p800 item-index">
+    <p style="font-size: 60px;">¿Buscas una solucion web?</p>
+    <p style="font-size: 30px">Plantillas web para paginas, Blogs, tiendas online y mas</p>
+    <button type="button" class="btn btn-success" style="border-radius: 15px; font-size: 20px">Plantillas</button>
+</div>
+<div class="cont item-index">
+    <h1>¿Que buscas?</h1>
+    <div class="tab-view">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="tab-1-tab" data-toggle="tab" href="#tab-1" role="tab"
+                   aria-controls="tab-1" aria-selected="true">DESTACADO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab-2-tab" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2"
+                   aria-selected="false">TIENDA EN LINEA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab-3-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3"
+                   aria-selected="false">BLOGS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab-4-tab" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3"
+                   aria-selected="false">PERSONAL</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1-tab">
+                <!-- Tab 1 content -->
+                <p>Tab 1 content</p>
+            </div>
+            <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2-tab">
+                <!-- Tab 2 content -->
+                <p>Tab 2 content</p>
+            </div>
+            <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="tab-3-tab">
+                <!-- Tab 3 content -->
+                <p>Tab 3 content</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

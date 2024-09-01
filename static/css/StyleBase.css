@@ -1,0 +1,16 @@
+.cont {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.p800{
+    height: 800px !important;
+}
+
+.item-index{
+
+    background-color: rgb(159 159 159 / 35%);
+}

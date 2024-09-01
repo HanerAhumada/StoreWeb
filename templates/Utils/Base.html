@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title if title else "SiteShop" }}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/StyleBase.css') }}">
+    <style>
+        .bg-white {
+            background-color: #ffffff !important;
+        }
+        .navbar {
+            transition: background-color 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light"
+     style="padding:10px 100px 10px 100px;background-color: rgb(255 255 255 / 70%) !important; position: fixed; width: 100%">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex justify-content-between align-items-center menu-owm">
+            <div class="d-flex">
+                <a class="navbar-brand" href="#">| Plantillas web |</a>
+                <a class="navbar-brand" href="#">Tiendas Online |</a>
+                <a class="navbar-brand" href="#">Atencion |</a>
+            </div>
+            <div class="logo-container" style="flex: 1; display: flex; justify-content: center; align-items: center">
+                <a class="navbar-brand" href="#"><img src="logo.png"/>SiteShop</a>
+            </div>
+            <div class="d-flex">
+                <a class="navbar-brand" href="#" class="">Inicio sesión</a>
+                <a class="navbar-brand btn btn-outline-dark" href="#">Registrate</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid flex">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 100) { // ajusta este valor según sea necesario
+            navbar.classList.add('bg-white');
+        } else {
+            navbar.classList.remove('bg-white');
+        }
+    });
+</script>
+
+</body>
+</html>

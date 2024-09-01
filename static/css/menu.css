@@ -1,0 +1,30 @@
+.menu-owm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-owm :only-child {
+    padding: 10px;
+    font-weight: 500 !important;
+}
+
+.logo-container {
+    flex: 1;
+    text-align: center;
+}
+
+.logo-container img {
+    max-width: 100px; /* ajusta el tamaño del logo */
+    height: auto;
+    margin: 0 auto; /* centra el logo horizontalmente */
+}
+
+body {
+    background-image: url("../img/fondoIndex.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
