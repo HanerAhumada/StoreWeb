@@ -1,3 +1,4 @@
+/*El contenido es tipo flex para manejar su posicion, y ocupa el 100%*/
 .cont {
     display: flex;
     width: 100%;
@@ -6,11 +7,34 @@
     justify-content: center
 }
 
-.p800{
-    height: 800px !important;
+/*Color del home de bienvenida*/
+.item-index{
+    background-color: rgb(159 159 159 / 35%);
 }
 
-.item-index{
+/*Fondo del home*/
+.menuBack {
+    background-image: url("../img/fondoIndex.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.menuBack::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(143, 248, 143, 0.22); /* Verde transparente */
+    pointer-events: none;
+    z-index: 1; /* Asegura que el filtro verde esté sobre el fondo pero debajo del contenido */
+}
 
-    background-color: rgb(159 159 159 / 35%);
+/*Flex basico que centra los datos*/
+.flexCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

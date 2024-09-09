@@ -21,10 +21,3 @@
     height: auto;
     margin: 0 auto; /* centra el logo horizontalmente */
 }
-
-body {
-    background-image: url("../img/fondoIndex.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}

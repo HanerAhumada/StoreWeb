@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/StyleBase.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sizes.css') }}">
     <style>
         .bg-white {
             background-color: #ffffff !important;
@@ -18,7 +19,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light"
-     style="padding:10px 100px 10px 100px;background-color: rgb(255 255 255 / 70%) !important; position: fixed; width: 100%">
+     style="padding:10px 100px 10px 100px;background-color: rgb(255 255 255 / 70%) !important; position: fixed; width: 100%; z-index: 5">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,22 +27,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="d-flex justify-content-between align-items-center menu-owm">
             <div class="d-flex">
-                <a class="navbar-brand" href="#">| Plantillas web |</a>
-                <a class="navbar-brand" href="#">Tiendas Online |</a>
+                <a class="navbar-brand" href="/templates/web">| Plantillas web |</a>
+                <a class="navbar-brand" href="/templates/stores">Tiendas Online |</a>
                 <a class="navbar-brand" href="#">Atencion |</a>
             </div>
             <div class="logo-container" style="flex: 1; display: flex; justify-content: center; align-items: center">
-                <a class="navbar-brand" href="#"><img src="logo.png"/>SiteShop</a>
+                <a class="navbar-brand" href="/"><img src="logo.png"/>SiteShop</a>
             </div>
             <div class="d-flex">
-                <a class="navbar-brand" href="#" class="">Inicio sesión</a>
-                <a class="navbar-brand btn btn-outline-dark" href="#">Registrate</a>
+                <a class="navbar-brand" href="/login" class="">Inicio sesión</a>
+                <a class="navbar-brand btn btn-outline-dark" href="/registerUser">Registrate</a>
             </div>
         </div>
     </div>
 </nav>
 
-<div class="container-fluid flex">
+<div class="container-fluid flex" style="padding: 0;position: absolute; top: 100px">
     {% block content %}
     {% endblock %}
 </div>

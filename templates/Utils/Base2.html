@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title if title else "SiteShop" }}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/StyleBase.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sizes.css') }}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light"
+     style="padding:10px 100px 10px 100px;background-color: rgb(255 255 255 / 70%) !important; position: fixed; width: 100%; z-index: 5">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex justify-content-between align-items-center menu-owm">
+            <div class="logo-container"
+                 style="flex: 1; display: flex; justify-content: center; align-items: center">
+                <a class="navbar-brand" href="/"><img src="logo.png"/>SiteShop</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid flex" style="padding: 0; position: absolute; top: 100px">
+    {% block content %}
+    {% endblock %}
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
