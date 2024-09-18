@@ -14,7 +14,7 @@ class Usuarios(db.Model, BaseModelData):
     direccion = db.Column(db.String(50), nullable=True)
     telefono = db.Column(db.String(50), nullable=True)
     email = db.Column(db.String(50), nullable=False)
-    password = db.Column(db.String(50), nullable=False)
+    password = db.Column(db.String(255), nullable=False)
     estado = db.Column(db.String(50), nullable=False)
     rol = db.Column(categoria_enum, nullable=False)
 
@@ -24,10 +24,12 @@ class Usuarios(db.Model, BaseModelData):
     def __init__(self, **datos):
         self.nombre = datos.get('nombre')
         self.apellido = datos.get('apellido')
+        self.fecha_nacimiento = datos.get('fecha')
         self.direccion = datos.get('direccion')
         self.telefono = datos.get('telefono')
         self.email = datos.get('email')
         self.password = datos.get('password')
         self.estado = datos.get('estado')
+        self.rol = 'Cliente'
 
 
